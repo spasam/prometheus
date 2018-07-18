@@ -1,0 +1,24 @@
+---
+
+region: us-east-1
+
+delay_seconds: 60
+range_seconds: 600
+period_seconds: 60
+
+metrics:
+- aws_namespace: AWS/DynamoDB
+  aws_metric_name: ConsumedReadCapacityUnits
+  aws_dimensions: [TableName]
+
+- aws_namespace: AWS/DynamoDB
+  aws_metric_name: ConsumedWriteCapacityUnits
+  aws_dimensions: [TableName]
+
+- aws_namespace: AWS/DynamoDB
+  aws_metric_name: ProvisionedReadCapacityUnits
+  aws_dimensions: [TableName]
+
+- aws_namespace: AWS/DynamoDB
+  aws_metric_name: ProvisionedWriteCapacityUnits
+  aws_dimensions: [TableName]
